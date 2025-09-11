@@ -1,0 +1,15 @@
+2025-09-11 15:22:36,728 [INFO] BEGIN (implicit)
+2025-09-11 15:22:36,730 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 15:22:36,730 [INFO] [generated in 0.00055s] (222, 'thenila', 22, 400000.0, 1)
+2025-09-11 15:22:36,732 [INFO] COMMIT
+2025-09-11 15:22:36,737 [INFO] Employee Created Successfully
+2025-09-11 15:22:45,579 [INFO] BEGIN (implicit)
+2025-09-11 15:22:45,580 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 15:22:45,581 [INFO] [generated in 0.00068s] ()
+2025-09-11 15:22:45,582 [INFO] Read All Employee
+2025-09-11 16:55:40,415 [INFO] BEGIN (implicit)
+2025-09-11 16:55:40,417 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 16:55:40,418 [INFO] [generated in 0.00050s] (11, 'the', 11, 244213.0, 1)
+2025-09-11 16:55:40,446 [INFO] COMMIT
+2025-09-11 16:55:40,455 [INFO] employee created.

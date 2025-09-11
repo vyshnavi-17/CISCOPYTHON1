@@ -18,7 +18,7 @@ Your Option: '''
         return None
     
     if choice == 1:
-        try:
+      
             id = int(input('ID: '))
             name = input('Name: ')
             age = int(input('Age: '))
@@ -27,11 +27,19 @@ Your Option: '''
 
             employee = {'id': id, 'name': name, 'age': age, 
                         'salary': salary, 'is_active': is_active}
-
-            repo.create_employee(employee)
-            print('Employee Created Successfully.')
-        except ValueError:
-            print("Invalid input for ID, Age or Salary. Please try again.")
+            
+            try:
+                repo.create_employee(employee)
+                print('Employee Created Successfully.')
+            
+            except repo.EmpoyeeAlreadyExistError as ex:
+                print(f'Duplicated Employee ID:{ex}')
+                
+            except repo.DatabaseError as ex:
+                print(f'Database Error in creating exmployee:{ex}')  
+                          
+        
+            
 
     elif choice == 2:
         print('List of Employees:')
